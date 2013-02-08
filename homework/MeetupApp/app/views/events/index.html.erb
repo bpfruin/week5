@@ -12,14 +12,16 @@
 
 <% @events.each do |event| %>
   <tr>
-    <td><%= event.title %></td>
-    <td><%= event.date %></td>
-<!--     <td><%= event.venue_id %></td>
- -->
-    <td><%= Venue.find_by_id(event.venue_id).name %></td>
 
 
-    <td><%= link_to 'Show', event %></td>
+ <td><%= link_to event.title, event %></td>
+
+<td><%= event.date %></td>
+
+
+ <td><%= link_to Venue.find_by_id(event.venue_id).name, Venue.find_by_id(event.venue_id) %></td>
+
+
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
     <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
