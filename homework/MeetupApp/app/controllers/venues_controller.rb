@@ -74,8 +74,24 @@ class VenuesController < ApplicationController
   # DELETE /venues/1
   # DELETE /venues/1.json
   def destroy
+    
     @venue = Venue.find(params[:id])
     @venue.destroy
+
+
+    @events = Event.all
+
+    @events.each do |event|
+
+      if event.venue_id == @venue.id
+
+        event.destroy
+
+      end
+      
+    end
+    
+
 
     respond_to do |format|
       format.html { redirect_to venues_url }

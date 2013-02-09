@@ -1,19 +1,41 @@
 body {
-  font-family: 'Helvetica Nueue', Helvetica, Arial;
+
+/*  font-family: 'Helvetica Nueue', Helvetica, Arial;
+*/
+
+font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+
   font-size: 16px;
   width: 960px;
   margin: 20px auto;
+
+  background: url('../images/beach.jpg');
+
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 80px;
   font-weight: bold;
+  text-align: center
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center
+
 }
 
 td {
   padding: 12px 0px;
   font-size: 18px;
   border-bottom: solid 1px #5484a7;
+
 }
 
 table {

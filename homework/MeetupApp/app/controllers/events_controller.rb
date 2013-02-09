@@ -5,7 +5,13 @@ class EventsController < ApplicationController
     # @events = Event.all
 
     @events = Event.order("title asc")
+    @venues = Venue.all
 
+    @events.each do |event|
+
+    @venue = @venues.find {|venue| venue.id == event.venue_id}
+
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,6 +23,7 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     @event = Event.find(params[:id])
+    @venue = Venue.find(Event.find(params[:id]).venue_id) 
 
     respond_to do |format|
       format.html # show.html.erb
